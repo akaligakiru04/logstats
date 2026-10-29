@@ -1,0 +1,11 @@
+2026-10-23T11:00:37.098457+02:00 Farah groupadd[452]: new group: name=farah, GID=1000
+2026-10-23T11:00:57.216209+02:00 Farah usermod[482]: add 'farah' to group 'adm'
+2026-10-23T05:12:06.098457+02:00 Farah sshd[12744]: Failed none for invalid user 0 from 192.0.2.4 port 49445 ssh2
+2026-10-23T11:00:57.461552+02:00 Farah systemd-logind[188]: Session c1 logged out. Waiting for processes to exit.
+2026-10-23T05:11:25.098457+02:00 Farah sshd[12740]: Failed password for invalid user 0101 from 198.51.100.99 port 47796 ssh2
+2026-10-23T06:26:08.098457+02:00 Farah sshd[15088]: Did not receive identification string from 198.51.100.56 port 53286
+2026-10-23T11:17:01.389496+02:00 Farah CRON[1175]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-23T05:11:28.098457+02:00 Farah sshd[12739]: Failed password for invalid user 0101 from 203.0.113.15 port 34990 ssh2
+
+
+
