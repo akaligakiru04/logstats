@@ -1,0 +1,107 @@
+2026-10-23T11:00:09.461728+02:00 Farah systemd-logind[188]: New seat seat0.
+2026-10-23T11:00:37.095568+02:00 Farah groupadd[452]: group added to /etc/group: name=farah, GID=1000
+2026-10-23T11:00:37.097864+02:00 Farah groupadd[452]: group added to /etc/gshadow: name=farah
+2026-10-23T11:00:37.098457+02:00 Farah groupadd[452]: new group: name=farah, GID=1000
+2026-10-23T11:00:37.111895+02:00 Farah useradd[457]: new user: name=farah, UID=1000, GID=1000, home=/home/farah, shell=/bin/bash, from=/dev/pts/0
+2026-10-23T11:00:57.188621+02:00 Farah passwd[468]: pam_unix(passwd:chauthtok): password changed for farah
+2026-10-23T11:00:57.206126+02:00 Farah gpasswd[478]: members of group users set by root to farah
+2026-10-23T11:00:57.216209+02:00 Farah usermod[482]: add 'farah' to group 'adm'
+2026-10-23T11:00:57.216293+02:00 Farah usermod[482]: add 'farah' to group 'cdrom'
+2026-10-23T11:00:57.216351+02:00 Farah usermod[482]: add 'farah' to group 'sudo'
+2026-10-23T11:00:57.216403+02:00 Farah usermod[482]: add 'farah' to group 'dip'
+2026-10-23T11:00:57.216426+02:00 Farah usermod[482]: add 'farah' to group 'plugdev'
+2026-10-23T11:00:57.216472+02:00 Farah usermod[482]: add 'farah' to shadow group 'adm'
+2026-10-23T11:00:57.216509+02:00 Farah usermod[482]: add 'farah' to shadow group 'cdrom'
+2026-10-23T11:00:57.216538+02:00 Farah usermod[482]: add 'farah' to shadow group 'sudo'
+2026-10-23T11:00:57.216562+02:00 Farah usermod[482]: add 'farah' to shadow group 'dip'
+2026-10-23T11:00:57.216618+02:00 Farah usermod[482]: add 'farah' to shadow group 'plugdev'
+2026-10-23T11:00:57.242589+02:00 Farah su[501]: (to farah) root on pts/0
+2026-10-23T11:00:57.244218+02:00 Farah su[501]: pam_unix(su:session): session opened for user farah(uid=1000) by (uid=0)
+2026-10-23T11:00:57.306318+02:00 Farah systemd-logind[188]: New session 'c1' of user 'farah' with class 'user' and type 'tty'.
+2026-10-23T11:00:57.320110+02:00 Farah (systemd): pam_unix(systemd-user:session): session opened for user farah(uid=1000) by farah(uid=0)
+2026-10-23T11:00:57.321020+02:00 Farah systemd-logind[188]: New session 'c2' of user 'farah' with class 'manager' and type 'unspecified'.
+2026-10-23T11:00:57.459940+02:00 Farah su[501]: pam_unix(su:session): session closed for user farah
+2026-10-23T11:00:57.461552+02:00 Farah systemd-logind[188]: Session c1 logged out. Waiting for processes to exit.
+2026-10-23T11:00:57.464300+02:00 Farah systemd-logind[188]: Removed session c1.
+2026-10-23T11:01:07.668734+02:00 Farah systemd-logind[188]: Removed session c2.
+2026-10-23T11:01:07.668954+02:00 Farah (sd-pam): pam_unix(systemd-user:session): session closed for user farah
+2026-10-23T11:01:46.557317+02:00 Farah su[579]: (to farah) root on pts/0
+2026-10-23T11:01:46.557873+02:00 Farah su[579]: pam_unix(su:session): session opened for user farah(uid=1000) by (uid=0)
+2026-10-23T11:01:46.597938+02:00 Farah systemd-logind[188]: New session 'c3' of user 'farah' with class 'user' and type 'tty'.
+2026-10-23T11:01:46.610358+02:00 Farah (systemd): pam_unix(systemd-user:session): session opened for user farah(uid=1000) by farah(uid=0)
+2026-10-23T11:01:46.611368+02:00 Farah systemd-logind[188]: New session 'c4' of user 'farah' with class 'manager' and type 'unspecified'.
+2026-10-23T11:01:46.729863+02:00 Farah su[579]: pam_unix(su:session): session closed for user farah
+2026-10-23T11:01:46.731378+02:00 Farah systemd-logind[188]: Session c3 logged out. Waiting for processes to exit.
+2026-10-23T11:01:46.734825+02:00 Farah su[620]: (to farah) root on pts/0
+2026-10-23T11:01:46.735601+02:00 Farah su[620]: pam_unix(su:session): session opened for user farah(uid=1000) by (uid=0)
+2026-10-23T11:01:46.737980+02:00 Farah systemd-logind[188]: New session 'c5' of user 'farah' with class 'user' and type 'tty'.
+2026-10-23T11:01:46.740345+02:00 Farah systemd-logind[188]: Removed session c3.
+2026-10-23T11:01:46.745067+02:00 Farah su[620]: pam_unix(su:session): session closed for user farah
+2026-10-23T11:01:46.746525+02:00 Farah systemd-logind[188]: Session c5 logged out. Waiting for processes to exit.
+2026-10-23T11:01:46.750003+02:00 Farah su[637]: (to farah) root on pts/0
+2026-10-23T11:01:46.750604+02:00 Farah su[637]: pam_unix(su:session): session opened for user farah(uid=1000) by (uid=0)
+2026-10-23T11:01:46.752825+02:00 Farah systemd-logind[188]: New session 'c6' of user 'farah' with class 'user' and type 'tty'.
+2026-10-23T11:01:46.753844+02:00 Farah systemd-logind[188]: Removed session c5.
+2026-10-23T11:01:46.759898+02:00 Farah su[637]: pam_unix(su:session): session closed for user farah
+2026-10-23T11:01:46.761287+02:00 Farah systemd-logind[188]: Session c6 logged out. Waiting for processes to exit.
+2026-10-23T11:01:46.768293+02:00 Farah systemd-logind[188]: Removed session c6.
+2026-10-23T11:01:47.112465+02:00 Farah su[656]: (to farah) root on pts/0
+2026-10-23T11:01:47.113052+02:00 Farah su[656]: pam_unix(su:session): session opened for user farah(uid=1000) by (uid=0)
+2026-10-23T11:01:47.115048+02:00 Farah systemd-logind[188]: New session 'c7' of user 'farah' with class 'user' and type 'tty'.
+2026-10-23T11:01:47.437276+02:00 Farah su[656]: pam_unix(su:session): session closed for user farah
+2026-10-23T11:01:47.439445+02:00 Farah systemd-logind[188]: Session c7 logged out. Waiting for processes to exit.
+2026-10-23T11:01:47.439993+02:00 Farah systemd-logind[188]: Removed session c7.
+2026-10-23T11:01:47.441943+02:00 Farah su[695]: (to farah) root on pts/0
+2026-10-23T11:01:47.442547+02:00 Farah su[695]: pam_unix(su:session): session opened for user farah(uid=1000) by (uid=0)
+2026-10-23T11:01:47.444456+02:00 Farah systemd-logind[188]: New session 'c8' of user 'farah' with class 'user' and type 'tty'.
+2026-10-23T11:01:47.466639+02:00 Farah su[695]: pam_unix(su:session): session closed for user farah
+2026-10-23T11:01:47.468319+02:00 Farah systemd-logind[188]: Session c8 logged out. Waiting for processes to exit.
+2026-10-23T11:01:47.753867+02:00 Farah login: pam_unix(login:session): session opened for user farah(uid=1000) by farah(uid=0)
+2026-10-23T11:01:47.755946+02:00 Farah systemd-logind[188]: New session 'c9' of user 'farah' with class 'user' and type 'tty'.
+2026-10-23T11:01:47.898519+02:00 Farah systemd-logind[188]: Removed session c8.
+2026-10-23T11:02:20.865470+02:00 Farah sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-23T11:02:20.868129+02:00 Farah sudo: farah : TTY=/dev/pts/0 ; PWD=/mnt/c/WINDOWS/system32 ; USER=root ; COMMAND=/usr/bin/apt update
+2026-10-23T11:02:28.002674+02:00 Farah sudo: pam_unix(sudo:session): session closed for user root
+2026-10-23T11:02:40.433420+02:00 Farah sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-23T11:02:40.433575+02:00 Farah sudo: farah : TTY=/dev/pts/0 ; PWD=/mnt/c/WINDOWS/system32 ; USER=root ; COMMAND=/usr/bin/apt install -y git curl
+2026-10-23T11:02:43.833843+02:00 Farah sudo: pam_unix(sudo:session): session closed for user root
+2026-10-23T11:17:01.389496+02:00 Farah CRON[1175]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-23T11:17:01.392795+02:00 Farah CRON[1175]: pam_unix(cron:session): session closed for user root
+2026-10-23T12:17:01.417699+02:00 Farah CRON[1359]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-23T12:17:01.419797+02:00 Farah CRON[1359]: pam_unix(cron:session): session closed for user root
+2026-10-23T12:47:48.082391+02:00 Farah systemd-logind[188]: The system will power off now!
+2026-10-23T12:47:48.097605+02:00 Farah systemd-logind[188]: System is powering down.
+2026-10-23T12:47:48.104921+02:00 Farah login: pam_unix(login:session): session closed for user farah
+2026-10-25T13:43:37.154523+01:00 Farah systemd-logind[171]: New seat seat0.
+2026-10-25T13:43:38.427292+01:00 Farah login: pam_unix(login:session): session opened for user farah(uid=1000) by farah(uid=0)
+2026-10-25T13:43:38.433799+01:00 Farah systemd-logind[171]: New session 'c1' of user 'farah' with class 'user' and type 'tty'.
+2026-10-25T13:43:38.482825+01:00 Farah (systemd): pam_unix(systemd-user:session): session opened for user farah(uid=1000) by farah(uid=0)
+2026-10-25T13:43:38.483720+01:00 Farah systemd-logind[171]: New session 'c2' of user 'farah' with class 'manager' and type 'unspecified'.
+2026-10-25T14:04:02.769634+01:00 Farah (systemd-stdio-bridge): pam_unix(login:session): session opened for user farah(uid=1000) by farah(uid=0)
+2026-10-25T14:04:02.951413+01:00 Farah (sd-pam): pam_unix(login:session): session closed for user farah
+2026-10-25T14:17:01.095622+01:00 Farah CRON[11883]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-25T14:17:01.099232+01:00 Farah CRON[11883]: pam_unix(cron:session): session closed for user root
+2026-10-25T14:35:08.781555+01:00 Farah sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-25T14:35:08.790335+01:00 Farah sudo: farah : TTY=/dev/pts/3 ; PWD=/home/farah ; USER=root ; COMMAND=/usr/bin/apt update
+2026-10-25T14:35:12.306303+01:00 Farah sudo: pam_unix(sudo:session): session closed for user root
+2026-10-25T14:35:12.323135+01:00 Farah sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-10-25T14:35:12.323851+01:00 Farah sudo: farah : TTY=/dev/pts/3 ; PWD=/home/farah ; USER=root ; COMMAND=/usr/bin/apt install python3.14-venv
+2026-10-25T14:35:19.741866+01:00 Farah sudo: pam_unix(sudo:session): session closed for user root
+2026-10-25T15:17:01.217001+01:00 Farah CRON[23687]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-25T15:17:01.220908+01:00 Farah CRON[23687]: pam_unix(cron:session): session closed for user root
+2026-10-25T16:17:01.291171+01:00 Farah CRON[35155]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-25T16:17:01.295420+01:00 Farah CRON[35155]: pam_unix(cron:session): session closed for user root
+2026-10-25T16:49:16.431444+01:00 Farah systemd-logind[171]: The system will power off now!
+2026-10-25T16:49:16.534461+01:00 Farah systemd-logind[171]: System is powering down.
+2026-10-25T16:49:16.548370+01:00 Farah login: pam_unix(login:session): session closed for user farah
+2026-10-26T09:25:49.576520+01:00 Farah systemd-logind[170]: New seat seat0.
+2026-10-26T09:25:50.824427+01:00 Farah login: pam_unix(login:session): session opened for user farah(uid=1000) by farah(uid=0)
+2026-10-26T09:25:50.830982+01:00 Farah systemd-logind[170]: New session 'c1' of user 'farah' with class 'user' and type 'tty'.
+2026-10-26T09:25:50.924918+01:00 Farah (systemd): pam_unix(systemd-user:session): session opened for user farah(uid=1000) by farah(uid=0)
+2026-10-26T09:25:50.925669+01:00 Farah systemd-logind[170]: New session 'c2' of user 'farah' with class 'manager' and type 'unspecified'.
+2026-10-26T10:17:01.544819+01:00 Farah CRON[11870]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-26T10:17:01.548268+01:00 Farah CRON[11870]: pam_unix(cron:session): session closed for user root
+2026-10-26T11:17:01.563718+01:00 Farah CRON[22958]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-26T11:17:01.599596+01:00 Farah CRON[22958]: pam_unix(cron:session): session closed for user root
+2026-10-26T12:17:01.658494+01:00 Farah CRON[34459]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-10-26T12:17:01.662098+01:00 Farah CRON[34459]: pam_unix(cron:session): session closed for user root
