@@ -23,6 +23,6 @@ if __name__ == "__main__" :
         ip_list = file_parser(path)
     except FileNotFoundError:
         sys.exit(f"logstats : file not found <{path}>")
-    print(ip_list)
+    # print(ip_list)
     for dic in ip_list:
         print(f"Date and Time : {dic['time']}, IP Addresss : {dic['ip']}")
