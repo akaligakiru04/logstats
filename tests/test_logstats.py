@@ -1,3 +1,4 @@
+import types
 from pathlib import Path
 
 import logstats
@@ -22,11 +23,17 @@ path2 = Path(__file__).parent / "empty.log"
 
 
 def test_sample_file_returns_all_ips():
-    assert logstats.file_parser(path1) == [{'time':'2026-10-23T05:12:06.098457+02:00','ip':'192.0.2.4'}, {'time':'2026-10-23T05:11:25.098457+02:00','ip':'198.51.100.99'},{'time':'2026-10-23T06:26:08.098457+02:00','ip':'198.51.100.56'},{ 'time':'2026-10-23T05:11:28.098457+02:00','ip':'203.0.113.15'},{'time':'2026-10-23T05:11:28.098457+02:00','ip':'203.0.113.5'}]
+    result = [{'time':'2026-10-23T05:12:06.098457+02:00','ip':'192.0.2.4'}, {'time':'2026-10-23T05:11:25.098457+02:00','ip':'198.51.100.99'},{'time':'2026-10-23T06:26:08.098457+02:00','ip':'198.51.100.56'},{ 'time':'2026-10-23T05:11:28.098457+02:00','ip':'203.0.113.15'},{'time':'2026-10-23T05:11:28.098457+02:00','ip':'203.0.113.5'}]
+    assert list(logstats.file_parser(path1)) == result
 
 def test_empty_file_returns_empty_list():
-    assert logstats.file_parser(path2) == []
-    
+    assert list(logstats.file_parser(path2))== []
+
+def test_file_parser_returns_generator():
+    assert isinstance(logstats.file_parser(path1), types.GeneratorType) 
+
+
+
 def test_no_ip_returns_None():
     assert logstats.ip_time_extractor(no_ip_line_4) is None
 

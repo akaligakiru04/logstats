@@ -11,18 +11,19 @@ def ip_time_extractor(line):
 
 def file_parser(path):
     with open(path) as f:
-        ip_list = []
         for line in f:
-            if ip_time_extractor(line) is not None:
-                ip_list.append(ip_time_extractor(line))
-        return ip_list
+            dic = ip_time_extractor(line)
+            if dic is not None:
+                yield dic
 
 if __name__ == "__main__" :
     path = sys.argv[1]
+    ip_list = file_parser(path)
+    
     try:
-        ip_list = file_parser(path)
+        for dic in ip_list:
+            print(f"Date and Time : {dic['time']}, IP Addresss : {dic['ip']}")
     except FileNotFoundError:
-        sys.exit(f"logstats : file not found <{path}>")
-    # print(ip_list)
-    for dic in ip_list:
-        print(f"Date and Time : {dic['time']}, IP Addresss : {dic['ip']}")
+            sys.exit(f"logstats : file not found <{path}>")
+    except IsADirectoryError:
+            sys.exit(f"<{path}> is a directory, expects a file")
