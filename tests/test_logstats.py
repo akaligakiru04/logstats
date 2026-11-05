@@ -16,10 +16,16 @@ ip_line_3 = "2026-10-23T06:26:08.098457+02:00 Farah sshd[15088]: Did not receive
 ip_line_4 = "2026-10-23T05:11:28.098457+02:00 Farah sshd[12739]: Failed password for invalid user 0101 from 203.0.113.15 port 34990 ssh2"
 two_digit_port_line = "2026-10-23T05:11:28.098457+02:00 Farah sshd[12740]: Connection closed by 203.0.113.5 port 22 [preauth]"
 
+rhost_line = "2026-10-23T05:11:28.098457+02:00 Farah sshd[123]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.5  user=root"
+
 empty_line = ""
 
 path1 = Path(__file__).parent / "sample_auth.log"
 path2 = Path(__file__).parent / "empty.log"
+
+
+def test_rhost_line_skipped_by_port_anchor():
+    assert logstats.ip_time_extractor(rhost_line) is None
 
 
 def test_sample_file_returns_all_ips():
