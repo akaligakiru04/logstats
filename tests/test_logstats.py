@@ -29,7 +29,7 @@ def test_rhost_line_skipped_by_port_anchor():
 
 
 def test_sample_file_returns_all_ips():
-    result = [{'time':'2026-10-23T05:12:06.098457+02:00','ip':'192.0.2.4'}, {'time':'2026-10-23T05:11:25.098457+02:00','ip':'198.51.100.99'},{'time':'2026-10-23T06:26:08.098457+02:00','ip':'198.51.100.56'},{ 'time':'2026-10-23T05:11:28.098457+02:00','ip':'203.0.113.15'},{'time':'2026-10-23T05:11:28.098457+02:00','ip':'203.0.113.5'}]
+    result = [logstats.Record('2026-10-23T05:12:06.098457+02:00', '192.0.2.4'),logstats.Record('2026-10-23T05:11:25.098457+02:00', '198.51.100.99'),logstats.Record('2026-10-23T06:26:08.098457+02:00','198.51.100.56'),logstats.Record('2026-10-23T05:11:28.098457+02:00','203.0.113.15'),logstats.Record('2026-10-23T05:11:28.098457+02:00','203.0.113.5')]
     assert list(logstats.file_parser(path1)) == result
 
 def test_empty_file_returns_empty_list():
@@ -47,10 +47,10 @@ def test_sudo_version_returns_None():
     assert logstats.ip_time_extractor(fake_ip_line) is None
 
 def test_sshd_failed_password_returns_time_and_ip():
-    assert logstats.ip_time_extractor(ip_line_1) == { "time":'2026-10-23T05:12:06.098457+02:00', "ip":"192.0.2.4" }
+    assert logstats.ip_time_extractor(ip_line_1) == logstats.Record('2026-10-23T05:12:06.098457+02:00',"192.0.2.4")
 
 def test_2_digit_port_returns_ip_and_time():
-    assert logstats.ip_time_extractor(two_digit_port_line) == { "time":'2026-10-23T05:11:28.098457+02:00', "ip":"203.0.113.5" }
+    assert logstats.ip_time_extractor(two_digit_port_line) == logstats.Record('2026-10-23T05:11:28.098457+02:00',"203.0.113.5")
 
 def test_empty_line_returns_None():
     assert logstats.ip_time_extractor(empty_line) is None
