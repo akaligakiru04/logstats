@@ -1,5 +1,5 @@
-- the command : python3 logstatsf.py <path> reads an auth file and prints the time and ip adresses of any line that have an IP address (one line per match)
-- if the file is not found, a message error is printed to stderr and the program exists with a status code of 1
+- the command : python3 logstats.py <path> reads an auth file and prints the 4 stats (number of lines, number of ip lines, number of unique ips and a list of the top 5 ips by repetition count then by text) 
+- if the file is not found, an error message is printed to stderr and the program exits with a status code of 1
 - to test: run python -m pytest from the repo root
 - known limitations:
     - only lines that fit the "has an IP address" criteria are ones where it is directly followed by " port". if it is not, the line is ignored.
