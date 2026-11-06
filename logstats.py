@@ -8,7 +8,6 @@ def ip_time_extractor(line):
         raise TypeError(f"Invalid input type in:  {line} , expects String")
     matched = re.search(p,line)
     if matched is not None:
-        # return {'time':line.split(" ")[0],'ip':matched.group(1)}
         return Record(line.split(" ")[0], matched.group(1))
 @dataclass
 class Record:
@@ -18,23 +17,38 @@ class Record:
 def file_parser(path):
     with open(path) as f:
         for line in f:
-            dic = ip_time_extractor(line)
-            if dic is not None:
-                 yield dic
+            rec = ip_time_extractor(line)
+            if rec is not None:
+                 yield rec
         
 def stats(path):
-     file_parser(path)
+    lines = 0
+    records = file_parser(path)
+    records_list = list(records)
+    lines_with_ip = len(records_list)
+    with open(path) as f:
+        lines = sum(1 for line in f)
 
+    unique_ips = len(list({record.ip for record in records_list}))
+    ip_count = {}
+    for record in records_list:
+        if ip_count.get(record.ip, 0):
+             ip_count[record.ip] += 1
+        else:
+             ip_count[record.ip] = 1
+    sorted_ips = sorted(ip_count.items(), key = lambda x : (-x[1],x[0]) ,reverse= False)
+    top_ips = sorted_ips[:5]
+    return(lines, lines_with_ip, unique_ips, top_ips)
 
 
 if __name__ == "__main__" :
-    
-    print(list(file_parser("tests/sample_auth.log")))
     path = sys.argv[1]
-    ip_list = file_parser(path)
     try:
-        for dic in ip_list:
-            print(f"Date and Time : {dic['time']}, IP Addresss : {dic['ip']}")
+        lines, lines_with_ip, unique_ips, top_ips = stats(path)
+        print("lines: " ,lines)
+        print("lines_with_ip: " ,lines_with_ip)
+        print("unique_ips: " ,unique_ips)
+        print("top_ips: " ,top_ips)
     except FileNotFoundError:
             sys.exit(f"logstats : file not found <{path}>")
     except IsADirectoryError:
